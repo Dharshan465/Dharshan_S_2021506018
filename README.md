@@ -77,3 +77,73 @@ Develop a web-based Tic Tac Toe game for two players that allows them to take tu
 3) Source code with comments explaining the logic and structure for future reference or modifications. Zip it
 
 **Push the code in HTML, CSS and JS, along with a demo video of your solution into the github repo.**
+
+
+
+# DHARSHAN S 2021506018
+
+# Colorful Tic Tac Toe Game
+
+## Overview
+
+This project is a **Tic Tac Toe** game that supports two players: **Player X** and **Player O**. The game can be played on both desktop and mobile devices thanks to responsive design techniques. It features a scoreboard to track players' scores, a restart button to reset the game state without affecting the scores, a refresh button to reset the scores, and a rules button that displays the game's rules in a popup window.
+
+## Features
+
+1. **Two-Player Game**:  
+   Players take turns marking a cell in a 3x3 grid with either an "X" or "O". Player X always starts the game.
+
+2. **Scoreboard**:  
+   Displays the current score of each player. The scores persist between games unless the "Refresh Scores" button is clicked.
+
+3. **Restart Game**:  
+   Allows players to restart the game without resetting the scores.
+
+4. **Refresh Scores**:  
+   Resets the scores for both players to zero, allowing a fresh start.
+
+5. **Rules Popup**:  
+   A button labeled "Rules" shows a popup window with detailed rules of the game. The popup can be closed by clicking the "Close" button.
+
+6. **Responsive Design**:  
+   The game is designed to be fully responsive and works well on both desktop and mobile devices.
+
+## Technologies Used
+
+- **HTML5**: For the structure of the game.
+- **CSS3**: For the styling, including a responsive layout to ensure the game works on all screen sizes.
+- **JavaScript**: To implement the game logic, including detecting game wins/draws, handling player turns, and updating the UI (like the scoreboard and the game status).
+
+
+## File Structure
+
+- **index.html**:  
+   Contains the main structure of the game, including the game board, scoreboard, buttons, and rules popup.
+
+- **styles.css**:  
+   This file contains all the CSS styles used for making the game look visually appealing and responsive. It defines the layout of the game board, button styles, popup rules styling, and more.
+
+- **script.js**:  
+   Implements the core game logic, handles player interactions, checks for win/draw conditions, and updates the game UI.
+
+## How to Play
+
+1. Open the game in your browser.
+2. Player X starts by clicking on an empty cell on the 3x3 grid.
+3. Players take turns marking a cell until one player gets three in a row (vertically, horizontally, or diagonally) or all cells are filled (resulting in a draw).
+4. Use the "Restart Game" button to play another round without resetting the score.
+5. To reset the scores to zero, click the "Refresh Scores" button.
+6. Click on the "Rules" button to view the game rules in a popup.
+
+## Screenshots
+
+<img width="1277" alt="page1" src="https://github.com/user-attachments/assets/89f18ba1-4eed-4792-b65a-a74ea107fe8b">
+
+<img width="1280" alt="page3" src="https://github.com/user-attachments/assets/efdb933c-d565-4035-a656-408132b04434">
+
+<img width="1279" alt="page2" src="https://github.com/user-attachments/assets/2b04803a-ef45-42f0-adfc-06899868ff40">
+
+
+
+
+

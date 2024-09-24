@@ -1,0 +1,324 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+background: linear-gradient(115deg, #62cff4, #2c67f2)
+}
+
+.rules-title {
+    background: #3f51b5; /* Background for rules title */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 24px; /* Increased font size for title */
+}
+
+
+.rules-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 18px; /* Increased font size for rules */
+}
+
+
+.rules-list li {
+    margin: 10px 0;
+    text-align: left; /* Align text to the left */
+}
+
+.rules-container {
+    width: 400px; /* Increased width for rules */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px; /* Space between rules and game */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px; /* Max width for responsiveness */
+    background: #ffffff; /* Background for the container */
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.title-box {
+    background: #ff5722;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.game-container {
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 20px auto;
+    width: 360px; /* Increased width for larger grid */
+    background-color: #424242; /* Darker background for the grid */
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100%;
+    height: 120px; /* Increased height for larger cells */
+    background-color: #ffffff;
+    border: 2px solid #3f51b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px; /* Increased font size */
+    color: #3f51b5;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.cell.x {
+    color: #ff5722; /* Color for X */
+}
+
+.cell.o {
+    color: #4caf50; /* Color for O */
+}
+
+.cell:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(63, 81, 181, 0.5);
+}
+
+.status {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3f51b5;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 32px; /* Increased font size for title */
+ background: #ff5722;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+
+.restart-btn, .refresh-btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #166D3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.restart-btn:hover, .refresh-btn:hover {
+    background-color: #388e3c;
+}
+
+.score-card {
+    margin-top: 20px;
+    font-size: 18px;
+    animation: slideIn 0.5s;
+}
+
+.score-title {
+    background: #3f51b5; /* Background for the score title */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.score-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.score-card td {
+    border: 1px solid #3f51b5;
+    padding: 10px;
+    text-align: left;
+    color: #3f51b5;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .game-board {
+        width: 90%;
+    }
+
+    .cell {
+        height: 80px; /* Adjusted height for mobile */
+        font-size: 36px; /* Adjusted font size for mobile */
+    }
+
+    .status {
+        font-size: 20px;
+    }
+
+    .restart-btn, .refresh-btn {
+        font-size: 16px;
+    }
+}
+
+.winning {
+    background-color: #ffd54f; /* Highlight color for the winning cells */
+    animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.popup {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+            z-index: 10; /* Make sure it appears above other elements */
+        }
+
+        .popup-title {
+            color: white;
+    font-weight: bold;
+    font-size: 22px; /* Increased font size for title */
+ background: #ff5722;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+        }
+
+        .popup-close {
+            background: #ff5722;
+            color: white;
+    font-size: 20px; /* Increased font size for title */
+
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .title-box h1 {
+        font-size: 24px; /* Make the title smaller on mobile */
+    }
+
+    .game-board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Ensure grid looks good on smaller screens */
+        grid-gap: 10px;
+        width: 100%;
+        height: auto; /* Adjust height for better mobile viewing */
+    }
+
+    .cell {
+        width: 80px;  /* Adjust the size of cells on mobile */
+        height: 80px;
+    }
+
+    #status {
+        font-size: 18px; /* Make status text smaller */
+    }
+
+    .score-card {
+        font-size: 16px; /* Adjust scoreboard font size */
+    }
+
+    button {
+        width: 100%; /* Ensure buttons fill the available space */
+        margin-bottom: 10px;
+    }
+
+    /* Popup styling on mobile */
+    .popup {
+        width: 90%; /* Make popup smaller for mobile */
+    }
+}
+
+/* Extra Small Devices (e.g. Phones in portrait mode) */
+@media (max-width: 480px) {
+    .cell {
+        width: 60px;  /* Further adjust for very small screens */
+        height: 60px;
+    }
+
+    .score-card {
+        font-size: 14px; /* Further reduce scoreboard size */
+    }
+
+    .title-box h1 {
+        font-size: 20px; /* Make title smaller */
+    }
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+   
+    <div class="container">
+        <div class="title-box">
+            <h1>Tic Tac Toe</h1>
+        </div>
+
+        <div class="game-container">
+            <div id="gameBoard" class="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div id="status" class="status"></div>
+            <div id="scoreCard" class="score-card">
+                <h2 class="score-title">Scoreboard</h2>
+                <table>
+                    <tr>
+                        <td>Player X:</td>
+                        <td><span id="scoreX">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>Player O:</td>
+                        <td><span id="scoreO">0</span></td>
+                    </tr>
+                </table>
+            </div>
+            <button id="restartBtn" class="restart-btn">Restart Game</button>
+            <button id="refreshBtn" class="refresh-btn">Refresh Scores</button>
+            <!-- Add the Rules button here -->
+            <button id="rulesBtn" class="restart-btn">Rules</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Add this JavaScript for the popup functionality
+        const rulesBtn = document.getElementById('rulesBtn');
+        const popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.innerHTML = `
+            <div class="popup-title">Game Rules</div>
+            <ul class="rules-list">
+                <li>Two players take turns to mark a space in a 3x3 grid {X,O}.</li>
+                <li>Player X starts the game.</li>
+                <li>The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins.</li>
+                <li>If all nine squares are filled and no player has three in a row, the game is a draw.</li>
+                <li>Click on any empty cell to make your move.</li>
+                <li>Use the "Restart Game" button to play again without resetting scores.</li>
+                <li>Use the "Refresh Scores" button to reset scores to zero.</li>
+            </ul>
+            <button class="popup-close">Close</button>
+        `;
+
+        document.body.appendChild(popup);
+
+        rulesBtn.addEventListener('click', () => {
+            popup.style.display = 'block';
+        });
+
+        popup.querySelector('.popup-close').addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

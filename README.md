@@ -137,13 +137,13 @@ This project is a **Tic Tac Toe** game that supports two players: **Player X** a
 
 ## Screenshots
 
-<img width="1277" alt="page1" src="https://github.com/user-attachments/assets/89f18ba1-4eed-4792-b65a-a74ea107fe8b">
 
-<img width="1280" alt="page3" src="https://github.com/user-attachments/assets/efdb933c-d565-4035-a656-408132b04434">
-
-<img width="1279" alt="page2" src="https://github.com/user-attachments/assets/2b04803a-ef45-42f0-adfc-06899868ff40">
+<img width="1277" alt="page1" src="https://github.com/user-attachments/assets/4ffc0f8d-56ac-4730-bd6d-11b276ccb7eb">
 
 
+<img width="1280" alt="page3" src="https://github.com/user-attachments/assets/9291d420-c7a9-4930-947c-5c3441bf0f53">
 
 
+
+<img width="1279" alt="page2" src="https://github.com/user-attachments/assets/72904ba5-7a5f-461c-83fa-8aaf706a58a1">
 

@@ -1,3 +1,4 @@
+# I  have attached Description below
 # Random Walk Web Development Assessment 
 
 ## Instructions:
@@ -88,6 +89,8 @@ Develop a web-based Tic Tac Toe game for two players that allows them to take tu
 
 This project is a **Tic Tac Toe** game that supports two players: **Player X** and **Player O**. The game can be played on both desktop and mobile devices thanks to responsive design techniques. It features a scoreboard to track players' scores, a restart button to reset the game state without affecting the scores, a refresh button to reset the scores, and a rules button that displays the game's rules in a popup window.
 
+## I have used internet to view some syntax
+
 ## Features
 
 1. **Two-Player Game**:  
@@ -144,6 +147,7 @@ This project is a **Tic Tac Toe** game that supports two players: **Player X** a
 <img width="1280" alt="page3" src="https://github.com/user-attachments/assets/9291d420-c7a9-4930-947c-5c3441bf0f53">
 
 
-
 <img width="1279" alt="page2" src="https://github.com/user-attachments/assets/72904ba5-7a5f-461c-83fa-8aaf706a58a1">
+
+
 
